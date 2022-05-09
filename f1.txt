@@ -1,6 +1,20 @@
-a
-b
-c
-aa
-bb
-cc
+Name: Labh Yadav
+Email: labyadav@deloitte.com
+
+create table Trip( t_no INT PRIMARY KEY, from_city VARCHAR(20), to_city VARCHAR(20),departure_date DATE,return_date DATE);
+ 
+
+insert into Trip values (1,'bangalore','delhi','2015-11-05', '2015-12-05'),(2,'bangalore','delhi','2015-11-05', '2015-12-05'),(3,'bangalore','delhi','2015-11-05', '2015-12-05')
+ 
+
+create table Dept( dept_no varchar(10) PRIMARY KEY, dept_name varchar(20));
+ 
+insert into Dept values (1,'D1'),(2,'D2'),(3,'D3');
+ 
+
+create table Expense( eid INT PRIMARY KEY,amount INT,t_no INT,FOREIGN KEY(t_no) REFERENCES Trip(t_no));
+ 
+
+create table Salesman(s_no INT PRIMARY KEY,s_name VARCHAR(30), start_INT YEAR, dept_no varchar(10), FOREIGN KEY(dept_no) REFERENCES Dept(dept_no))
+
+ 
